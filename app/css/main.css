@@ -194,32 +194,36 @@ page main
     font-size: 20px;
     display: block;
     text-transform: initial;
-    margin-top: 20px;
+    margin-top: 25px;
     font-weight: 300;
 }
 
 .progress {
     display: flex;
     justify-content: space-between;
-    padding: 85px 0 60px;
+    padding: 85px 0 75px 0;
     color: #333;
 }
 
-.progress-child {}
+.progress-child {
+}
 
 .progress__img {
     width: 210px;
     height: 61.2px;
     display: block;
 }
-
+.progress-child:nth-child(2){
+    transform: translateX(-50px);
+    margin-right: -30px;
+}
 .progress__text {
     font-size: 18px;
     margin-top: 15px;
 }
 
 .options {
-    padding-bottom: 120px;
+    padding-bottom: 115px;
     color: #333;
     width: 100%;
 }
@@ -236,7 +240,7 @@ page main
     padding-right: 18px;
     background: #fff;
     position: relative;
-    margin-bottom: 45px;
+    margin-bottom: 50px;
 }
 
 .block:before {
@@ -276,6 +280,7 @@ page main
 .advantages-parent {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .advantages-child {
@@ -303,7 +308,7 @@ page main
     font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .advantages__text {
@@ -326,13 +331,14 @@ page main
 }
 
 .parthers {
-    padding-bottom: 75px;
+    padding-bottom: 85px;
 }
 
 .parthers-parent {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
 }
 
 .parthers-child {}
