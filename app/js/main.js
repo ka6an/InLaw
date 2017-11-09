@@ -1,26 +1,36 @@
 $(document).ready(function() {
-    $('.header__link').on('mouseenter', function() { // навели курсор
-        $(this).addClass('hovered');
-        if ($(this).data('name') === "servises") // навели на Услуги
-            $('#header-serises-subMenu').addClass('open');
+    /*===============
+    navigation menu
+    ===============*/
+    // hover
+    $('.header__link').on('mouseenter mouseleave', function() {
+        $(this).toggleClass('hovered');
     });
 
-    var fun = {
-        test: function() {
-            $(this).addClass('hovered');
-            $('#header-serises-subMenu').addClass('open');
-        }
-    };
-    $('.header__link').on('mouseleave', function() { // убрали курсор
-        $(this).removeClass('hovered');
-
-        $('#header-serises-subMenu').removeClass('open');
-        console.log(this);
-        $('#header-serises-subMenu').on('mouseenter', $.proxy( fun.test, this) ); // перешли в выпадающий список
-
-        $('#header-serises-subMenu').on('mouseleave', function() { // покинули выпадающий список и пункт меню
-            $('#header-serises-subMenu').removeClass('open');
-            $('#header-servises-link').removeClass('hovered');
-        });
+    $('#header-servises-link').on('mouseenter mouseleave', function() {
+        $('#header-serises-subMenu').toggleClass('open');
     });
+
+    $('#header-serises-subMenu').on('mouseenter mouseleave', function() {
+        $('#header-servises-link').toggleClass('hovered');
+        $('#header-serises-subMenu').toggleClass('open');
+    });
+
+    var header_height = 80 > $('.main').innerHeight() ? 80 : $('.main').innerHeight();
+    fixedMenu(header_height);
+    $(window).scroll(function() {
+        fixedMenu(header_height);
+    })
 });
+
+
+function fixedMenu(header_height) {
+    var top = $(this).scrollTop();
+    console.log('top = ' + top);
+    console.log('header_height = ' + header_height);
+    if (top > header_height)
+        $('#header').removeClass();
+    else {
+        $('#header').addClass('main-page');
+    }
+}
