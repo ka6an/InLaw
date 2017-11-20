@@ -8,29 +8,34 @@ $(document).ready(function() {
     });
 
     $('#header-servises-link').on('mouseenter mouseleave', function() {
-        $('#header-serises-subMenu').toggleClass('open');
+        $('#header-services-subMenu').toggleClass('open');
     });
 
-    $('#header-serises-subMenu').on('mouseenter mouseleave', function() {
+    $('#header-services-subMenu').on('mouseenter mouseleave', function() {
         $('#header-servises-link').toggleClass('hovered');
-        $('#header-serises-subMenu').toggleClass('open');
+        $('#header-services-subMenu').toggleClass('open');
     });
 
-    var header_height = 80 > $('.main').innerHeight() ? 80 : $('.main').innerHeight();
-    fixedMenu(header_height);
-    $(window).scroll(function() {
-        fixedMenu(header_height);
-    })
+    fixedMenu();
 });
 
+$(window).scroll(function() {
+    fixedMenu();
+})
 
-function fixedMenu(header_height) {
+function fixedMenu() {
     var top = $(this).scrollTop();
-    console.log('top = ' + top);
-    console.log('header_height = ' + header_height);
-    if (top > header_height)
+    if (top > 0)
         $('#header').removeClass();
-    else {
+    else
         $('#header').addClass('main-page');
-    }
+}
+
+
+/*===============
+form
+===============*/
+function is_checked(checkbox) {
+    if ($(checkbox).is(':checked'))
+        $(checkbox).parent().removeClass('incorrect');
 }
