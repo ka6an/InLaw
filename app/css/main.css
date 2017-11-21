@@ -20,6 +20,8 @@
 }
 
 
+
+
 /*==========
 header
 ==========*/
@@ -81,6 +83,7 @@ header.main-page .header__link {
 .header__link.hovered {
     color: var(--blue);
     opacity: 1;
+    cursor: pointer;
 }
 
 .header__link:before {
@@ -158,6 +161,8 @@ header.main-page .header__link {
 }
 
 .contacts__link {}
+
+
 
 
 /*==========
@@ -347,6 +352,8 @@ page main
 .parthers-child {}
 
 
+
+
 /*==========
 page about
 ==========*/
@@ -446,6 +453,8 @@ page about
 }
 
 
+
+
 /*==========
 service pages
 ==========*/
@@ -480,13 +489,19 @@ service pages
     font-size: 18px;
     color: #333;
 }
-.service__text > .link{
+
+.service__text_margin {
+    margin-top: 7px;
+}
+
+.service__text>.link {
     text-transform: uppercase;
     color: var(--blue);
     position: relative;
 }
-.service__text > .link:before{
-    content:"";
+
+.service__text>.link:before {
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 0;
@@ -495,7 +510,18 @@ service pages
     background: var(--blue);
     transition: width 0.2s ease;
 }
-.service__text > .link:hover:before{width: 100%;}
+
+.service__text>.link:hover:before {
+    width: 100%;
+}
+
+.title__h5 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #333;
+}
+
 .service-ul {
     margin: 13px 0;
 }
@@ -518,11 +544,7 @@ service pages
 }
 
 .services {
-    margin: 70px 0;
-}
-
-.services .service__text {
-    margin-top: 7px;
+    margin-top: 70px;
 }
 
 .service-wrap {
@@ -557,12 +579,15 @@ service pages
     border-image: linear-gradient(180deg, var(--blue) 0%, var(--darkBlue) 100%);
     border-image-slice: 1;
 }
-.service-1 .service-border-line{
+
+.service-1 .service-border-line {
     margin-top: 15px;
 }
+
 .feedback {
     background-repeat: no-repeat;
     background-position: left bottom;
+    margin-top: 70px;
 }
 
 .service-1 .feedback {
@@ -586,16 +611,20 @@ service pages
     color: #333;
     line-height: 1.3;
 }
-.frame{
+
+.frame {
     padding: 30px 25px;
     border: 2px solid #666;
     border-image: linear-gradient(43deg, var(--darkBlue), var(--blue));
     border-image-slice: 1;
     margin-top: 30px;
 }
-.frame .service__text{
+
+.frame .service__text {
     color: var(--darkBlue);
 }
+
+
 
 /*==========
 form
@@ -704,7 +733,6 @@ form
 
 .form__button {
     background: transparent;
-    border: none;
     font-size: 16px;
     color: var(--blue);
     width: 120px;
@@ -712,12 +740,14 @@ form
     height: 40px;
     border-radius: 3px;
     transition: .4s ease;
-    margin: 10px 0 0 0;
+    margin: 10px 0 30px 0;
 }
 
 .form__button:hover {
     cursor: pointer;
 }
+
+
 
 
 /*==========
