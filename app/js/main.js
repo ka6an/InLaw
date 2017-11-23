@@ -31,6 +31,10 @@ function fixedMenu() {
         $('#header').addClass('main-page');
 }
 
+function toggleModal() {
+    $('.modal-window').toggleClass('open');
+    $('body').toggleClass('no-scroll');
+}
 
 /*===============
 form
