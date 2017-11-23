@@ -2,29 +2,7 @@
 </head>
 
 <body>
-    <div class="modal-window">
-        <div class="modal-wrap" aria-hidden="true" role="dialog">
-            <div class="modal__overlay" onclick="toggleModal();"></div>
-            <div class="modal-dialog">
-                <div class="modal-body">
-                    <p class="modal__title">Обратная связь</p>
-                    <p class="modal__text">Если у Вас возникли вопросы, оставьте свои контакты с кратким описанием проблемы и мы обязательно с Вами свяжемся</p>
-                    <button class="modal-body__btn_close" onclick="toggleModal();"></button>
-                    <form action="#0" class="form">
-                        <input type="text" class="form__input" placeholder="Имя" required pattern="[А-Яа-яЁё]{2,}" title="Русские буквы">
-                        <input type="tel" class="form__input" placeholder="Телефон" required pattern="[0-9]{5,}" title="не менее 5 цифр">
-                        <input type="email" class="form__input" placeholder="Email" required>
-                        <textarea class="form__textarea" placeholder="Ваше сообщение"></textarea>
-                        <fieldset class="form__checkbox">
-                            <input type="checkbox" id="checkbox-agree" onchange="is_checked(this);">
-                            <label class="checkbox__label" for="checkbox-agree">Согласие на&nbsp;обработку персональных данных</label>
-                        </fieldset>
-                        <button class="form__button">Отправить</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    @@include('./template/modalWindow.html')
     <header id="header" class="main-page">
         <div class="header content">
             <a href="./" class="header__logo">

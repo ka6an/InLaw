@@ -1,0 +1,13 @@
+<div class="modal-window">
+    <div class="modal-wrap" aria-hidden="true" role="dialog">
+        <div class="modal__overlay" onclick="toggleModal();"></div>
+        <div class="modal-dialog">
+            <div class="modal-body">
+                <p class="modal__title">Обратная связь</p>
+                <p class="modal__text">Если у Вас возникли вопросы, оставьте свои контакты с кратким описанием проблемы и мы обязательно с Вами свяжемся</p>
+                <button class="modal-body__btn_close" onclick="toggleModal();"></button>
+                @@include('./form.html')
+            </div>
+        </div>
+    </div>
+</div>
