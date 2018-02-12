@@ -1,5 +1,4 @@
  @@include('./template/head.html')
-</head>
 
 <body>
     @@include('./template/modalWindow.html')
@@ -9,14 +8,14 @@
                 <img src="img/logo.png" alt="" class="logo__img">
             </a>
             <nav class="header-nav">
-                <a href="./" class="header__link link active">ГЛАВНАЯ</a>
+                <a href="./" class="header__link link">ГЛАВНАЯ</a>
                 <a href="./about.html" class="header__link link">о&nbsp;бюро</a>
-                <p id="header-servises-link" class="header__link link">услуги</p>
-                <div id="header-services-subMenu" class="services-subMenu">
+                <p class="header__link link header-servises-link">услуги</p>
+                <div class="services-subMenu header-services-subMenu">
                     <a href="./service-1.html" class="services-subMenu__link link">Судебная практика</a>
-                    <a href="./service-2.html" class="services-subMenu__link link">Корпоративная практика</a>
-                    <a href="./service-3.html" class="services-subMenu__link link">Абонентское юридическое обслуживание бизнеса</a>
-                    <a href="./service-4.html" class="services-subMenu__link link">Договорная практика. Консультации</a>
+                    <a href="./service-2.html" class="services-subMenu__link link">Договорная практика</a>
+                    <a href="./service-3.html" class="services-subMenu__link link">Корпоративная практика</a>
+                    <a href="./service-4.html" class="services-subMenu__link link">Абонентское юридическое обслуживание бизнеса</a>
                 </div>
                 <a href="./portfolio.html" class="header__link link">портфолио</a>
                 <a href="./contacts.html" class="header__link link">контакты</a>
@@ -29,7 +28,7 @@
             <div class="title-wrap">
                 <img class="title__img" src="./img/in_law.svg" alt="">
                 <h1 class="title__h1">Юридическое бюро<br />
-                    <span class="title__span">Профессиональные юридические услуги для бизнеса</span>
+                    <span class="title__span">Профессиональные юридические услуги для&nbsp;бизнеса</span>
                 </h1>
             </div>
         </div>
@@ -49,7 +48,7 @@
             </div>
             <div class="progress-child">
                 <img src="./img/progress_3.svg" alt="" class="progress__img">
-                <p class="progress__text">взыскано в пользу
+                <p class="progress__text">взыскано в&nbsp;пользу
                     <br /> моих клиентов-истцов</p>
             </div>
             <div class="progress-child">
@@ -63,7 +62,7 @@
             <div class="options-parent">
                 <div class="options-child">
                     <img src="./img/option-1.jpg" alt="" class="options__img">
-                    <p class="options__text">представление интересов клиентов в&nbsp;арбитражных&nbsp;спорах</p>
+                    <p class="options__text">представление интересов клиентов в&nbsp;арбитражных спорах</p>
                 </div>
                 <div class="options-child">
                     <img src="./img/option-2.jpg" alt="" class="options__img">
@@ -72,35 +71,43 @@
             </div>
         </div>
         <div class="block advantages">
-            <h2 class="title__h2">Обратившись в юридическое бюро IN LAW вы всегда можете рассчитывать на:</h2>
+            <h2 class="title__h2">Обратившись в&nbsp;юридическое бюро IN&nbsp;LAW вы&nbsp;всегда можете рассчитывать&nbsp;на:</h2>
             <div class="advantages-parent">
                 <div class="advantages-child">
                     <img src="./img/case.svg" alt="" class="advantages__img">
                     <h3 class="advantages__title">Профессионализм</h3>
                     <p class="advantages__text">многолетний стаж работы в&nbsp;юриспруденции</p>
-                    <p class="advantages__text">успешный опыт судебной практики в&nbsp;арбитражных судах и&nbsp;судах общей юрисдикции</p>
+                    <p class="advantages__text">успешный опыт судебной практики в&nbsp;арбитражных судах и&nbsp;судах общей&nbsp;юрисдикции</p>
                 </div>
                 <div class="advantages-child">
                     <img src="./img/done.svg" alt="" class="advantages__img">
                     <h3 class="advantages__title">Ответственность</h3>
                     <p class="advantages__text">не даю клиентам пустых обещаний</p>
-                    <p class="advantages__text">не берусь за заведомо проигрышные дела</p>
+                    <p class="advantages__text">не берусь за&nbsp;заведомо проигрышные&nbsp;дела</p>
                     <p class="advantages__text">всегда даю клиенту честную оценку судебной перспективы его&nbsp;дела</p>
                 </div>
                 <div class="advantages-child">
                     <img src="./img/security.svg" alt="" class="advantages__img">
                     <h3 class="advantages__title">Конфиденциальность</h3>
-                    <p class="advantages__text">информация и документы, полученные от клиента, никогда не станут доступны третьим лицам в ущерб интересам клиента</p>
+                    <p class="advantages__text">информация и&nbsp;документы, полученные от&nbsp;клиента, никогда не&nbsp;станут доступны третьим лицам в&nbsp;ущерб интересам&nbsp;клиента</p>
                 </div>
             </div>
         </div>
         <div class="block parthers">
             <h2 class="title__h2">нам доверяют</h2>
             <div class="parthers-parent">
-                <img src="./img/partner-1.png" alt="" class="parthers-child">
-                <img src="./img/partner-2.png" alt="" class="parthers-child">
-                <img src="./img/partner-3.png" alt="" class="parthers-child">
-                <img src="./img/partner-4.png" alt="" class="parthers-child">
+                <div class="parthers-child">
+                    <img src="./img/partner-1.png" alt="" class="parthers__img">
+                </div>
+                <div class="parthers-child">
+                <img src="./img/partner-2.png" alt="" class="parthers__img">
+                </div>
+                <div class="parthers-child">
+                <img src="./img/partner-3.png" alt="" class="parthers__img">
+                </div>
+                <div class="parthers-child">
+                <img src="./img/partner-4.png" alt="" class="parthers__img">
+                </div>
             </div>
         </div>
     </div>

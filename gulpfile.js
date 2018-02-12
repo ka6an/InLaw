@@ -15,7 +15,8 @@ var gulp = require('gulp'),
     del = require('del'),
     gulpIf = require('gulp-if'),
     htmlhint = require("gulp-htmlhint"),
-    fileinclude = require('gulp-file-include');
+    fileinclude = require('gulp-file-include'),
+    postcssUnits = require('postcss-units');
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'dev';
 
@@ -62,7 +63,7 @@ gulp.task('html', function() {
         .pipe(reload({ stream: true }));
 });
 
-gulp.task('js', ['jquery'],  function() {
+gulp.task('js', ['jquery'], function() {
     return gulp.src(path.app.js)
         .pipe(gulp.dest(path.dist.js))
         .pipe(reload({ stream: true }));
@@ -77,9 +78,15 @@ gulp.task('css', function() {
     var plugins = [
         autoprefixer,
         cssnext,
-        customProperties
+        customProperties,
+        postcssUnits
+    ];
+    var pluginsDev = [
+        postcssUnits
+
     ];
     return gulp.src(path.app.css)
+    .pipe(gulpIf(isDev, postcss(pluginsDev)))
         .pipe(gulpIf(!isDev, postcss(plugins)))
         //.pipe(gulpIf(isDev, sourcemaps.init()))
         .pipe(gulpIf(!isDev, csslint()))

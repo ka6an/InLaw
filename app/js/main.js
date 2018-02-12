@@ -7,14 +7,17 @@ $(document).ready(function() {
         $(this).toggleClass('hovered');
     });
 
-    $('#header-servises-link').on('mouseenter mouseleave', function() {
-        $('#header-services-subMenu').toggleClass('open');
+    $('.header-servises-link').on('mouseenter mouseleave', function() {
+        $('.header-services-subMenu').toggleClass('open');
     });
 
-    $('#header-services-subMenu').on('mouseenter mouseleave', function() {
-        $('#header-servises-link').toggleClass('hovered');
-        $('#header-services-subMenu').toggleClass('open');
+    $('.header-services-subMenu').on('mouseenter mouseleave', function() {
+        $('.header-servises-link').toggleClass('hovered');
+        $('.header-services-subMenu').toggleClass('open');
     });
+
+
+    defineActiveLink();
 
     fixedMenu();
 });
@@ -36,10 +39,17 @@ function toggleModal() {
     $('body').toggleClass('no-scroll');
 }
 
-/*===============
-form
-===============*/
-function is_checked(checkbox) {
-    if ($(checkbox).is(':checked'))
-        $(checkbox).parent().removeClass('incorrect');
+function defineActiveLink() {
+    let cur_path = window.location.pathname,
+        headerLink = $('.header__link');
+
+    headerLink.each(function(i, el) {
+        let headerLinkHref = $(el).attr('href');
+        if (headerLinkHref != null && headerLinkHref.indexOf(cur_path) !== -1) {
+            if (cur_path === '/')
+                headerLink.eq(0).addClass('active');
+            else
+                $(el).addClass('active');
+        }
+    });
 }
